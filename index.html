@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="nav">
+     <h1>Notes</h1>
+    <p>02/01/2026</p>
+   </div>
+    <hr>
+   <textarea name="" id="data" onchange="savefetchdata()" rows="100" cols="150"></textarea>
+</body>
+   <script>
+    document.getElementById("data").value = localStorage.getItem("data");
+    function savefetchdata(){
+    
+       let data = document.getElementById("data").value;
+       localStorage.setItem("data", data)
+    }
+   </script>
+</html>
